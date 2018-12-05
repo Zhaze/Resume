@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  title = "Zachary Hazen";
+  info = {
+      name: "Zachary Hazen",
+      email: "ZascharyScottHazen@gmail.com",
+      phone: "7204316293"
+  };
   isCollapsed = true;
   constructor() { }
 
