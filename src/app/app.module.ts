@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -22,7 +24,8 @@ import { NavigationComponent } from './navigation/navigation.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
