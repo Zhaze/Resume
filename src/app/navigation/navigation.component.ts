@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { INFO } from 'src/info';
 
 @Component({
   selector: 'app-navigation',
@@ -7,11 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavigationComponent implements OnInit {
-  info = {
-    name: "Zachary Hazen",
-    email: "ZascharyScottHazen@gmail.com",
-    phone: "7204316293"
-  }
+  info = INFO
   isCollapsed = true
 
   constructor() { }
