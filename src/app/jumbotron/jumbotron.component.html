@@ -1,3 +1,12 @@
-<p>
-  jumbotron works!
-</p>
+
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <img [src]="images[0].path">
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1].path">
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2].path">
+  </ng-template>
+</ngb-carousel>
