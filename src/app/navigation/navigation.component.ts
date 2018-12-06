@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { INFO } from 'src/info';
+import { INFO } from '../info';
 
 @Component({
   selector: 'app-navigation',
