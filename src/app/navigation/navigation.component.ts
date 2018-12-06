@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
@@ -13,9 +12,7 @@ export class NavigationComponent implements OnInit {
     email: "ZascharyScottHazen@gmail.com",
     phone: "7204316293"
   }
-
   isCollapsed = true
-
 
   constructor() { }
 
