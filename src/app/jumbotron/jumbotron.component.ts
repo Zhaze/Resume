@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { IMAGES } from 'src/carousel-images'
+import { IMAGES } from '../carousel-images'
 
 @Component({
   selector: 'app-jumbotron',
