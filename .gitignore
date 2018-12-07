@@ -2,7 +2,7 @@
 # security
 .firebaserc
 firebase.json
-/.firebase
+/.firebase/*
 
 # compiled output
 /dist
