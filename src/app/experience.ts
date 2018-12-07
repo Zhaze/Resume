@@ -5,8 +5,8 @@ export const EXPERIENCE: Experience[] = [
     title: 'Web Design, Sytem Development, Consultant',
     company: 'Self Employed',
     location: 'Denver, Colorado',
-    startDate: new Date('July, 2018').toString(),
-    endDate: new Date().toString(),
+    startDate: new Date('07/01/2018'),
+    endDate: new Date(),
     comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque sit amet magna id accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a porttitor orci. Proin et quam sit amet purus viverra rutrum. In sed risus sem. Nullam molestie dui libero, quis ultrices quam gravida id. Fusce vel ex hendrerit, vehicula felis id, sollicitudin nisl. In consequat, tellus sagittis lobortis ultrices, dui est faucibus erat, et venenatis velit orci et ante. Integer fringilla mi eget turpis finibus, quis gravida ligula auctor. Donec justo diam, blandit ultrices semper et, sollicitudin ac odio. Praesent ultrices varius lorem, nec convallis velit fermentum nec. Maecenas vel libero tincidunt, eleifend enim non, lacinia odio. Aliquam rutrum at risus ut molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean finibus faucibus efficitur. Nullam at ligula varius, sollicitudin risus vel, porttitor lacus. ',
     description: [
       'Working on local business websites and in house systems for a variety of companies.  Mainly working with Angular/cli, MongoDB, Node.js, and Express.js, as well as WordPress.',
@@ -17,8 +17,8 @@ export const EXPERIENCE: Experience[] = [
     title: 'IT Manager',
     company: 'AJS Holdings LLC',
     location: 'Denver, Colorado',
-    startDate: new Date('December, 2017').toString(),
-    endDate: new Date('July, 2018').toString(),
+    startDate: new Date('12/01/2017'),
+    endDate: new Date('07/01/2018'),
     comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque sit amet magna id accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a porttitor orci. Proin et quam sit amet purus viverra rutrum. In sed risus sem. Nullam molestie dui libero, quis ultrices quam gravida id. Fusce vel ex hendrerit, vehicula felis id, sollicitudin nisl. In consequat, tellus sagittis lobortis ultrices, dui est faucibus erat, et venenatis velit orci et ante. Integer fringilla mi eget turpis finibus, quis gravida ligula auctor. Donec justo diam, blandit ultrices semper et, sollicitudin ac odio. Praesent ultrices varius lorem, nec convallis velit fermentum nec. Maecenas vel libero tincidunt, eleifend enim non, lacinia odio. Aliquam rutrum at risus ut molestie. Pellentesque habitant morbi tristique ',
     description: [
       'Maintain hardware inventory and supplies while working closely with accounting to stay on, usually under, budget.',
@@ -33,8 +33,8 @@ export const EXPERIENCE: Experience[] = [
     title: 'IT Supervisor',
     company: 'AJS Holdings LLC',
     location: 'Denver, Colorado',
-    startDate: new Date('September, 2016').toString(),
-    endDate: new Date('December, 2017').toString(),
+    startDate: new Date('09/01/2016'),
+    endDate: new Date('12/01/2017'),
     comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque sit amet magna id accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a porttitor orci. Proin et quam sit amet purus viverra rutrum. In sed risus sem. Nullam molestie dui libero, quis ultrices quam gravida id. Fusce vel ex hendrerit, vehicula felis id, sollicitudin nisl. In consequat, tellus sagittis lobortis ultrices, dui est faucibus erat, et venenatis velit orci et ante. Integer fringilla mi eget turpis finibus, quis gravida ligula auctor. Donec justo diam, blandit ultrices semper et, sollicitudin ac odio. Praesent ultrices varius lorem, nec convallis velit fermentum',
     description: [
       'Manage deployment and support of internal infrastructure system ensuring that periodic tasks are completed by each team member.',
@@ -48,8 +48,8 @@ export const EXPERIENCE: Experience[] = [
     title: 'IT Administrator',
     company: 'AJS Holdings LLC',
     location: 'Denver, Colorado',
-    startDate: new Date('January, 2016').toString(),
-    endDate: new Date('September, 2016').toString(),
+    startDate: new Date('01/01/2016'),
+    endDate: new Date('09/01/2016'),
     comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque sit amet magna id accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a porttitor orci. Proin et quam sit amet purus viverra rutrum. In sed risus sem. Nullam molestie dui libero, quis ultrices quam gravida id. Fusce vel ex hendrerit, vehicula felis id, sollicitudin nisl. In consequat, tellus sagittis lobortis ultrices, dui est faucibus erat, et venenatis velit orci et ante. Integer fringilla mi eget turpis finibus, quis gravida ligula auctor. Donec justo diam, blandit ultrices semper et, sollicitudin ac odio. Praesent ultrices varius lorem, nec convallis velit fermentum nec.',
     description: [
       'Provide technical support to over three hundred employees on site, through phone, and via remote desktop.',
