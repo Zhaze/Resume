@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -28,7 +29,7 @@ import { PhoneNumberPipe } from './phone-number.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    CollapseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,12 +3,12 @@
   <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="navbar-collapse sticky" [ngbCollapse]="isCollapsed">
+  <div class="navbar-collapse sticky" [collapse]="isCollapsed">
     <div class="navbar-nav d-flex flex-sm-row justify-content-around">
         <a class="nav-item nav-link" href="mailto:ZacharyScottHazen@gmail.com">{{ info.email }}</a>
         <a class="nav-item nav-link" href="tel:{{ info.phone }}">{{ info.phone | phoneNumber }}</a>
     </div>
-  <div class="navbar-collapse sticky" [ngbCollapse]="isCollapsed">
+  <div class="navbar-collapse sticky" [collapse]="isCollapsed">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link mr-auto" routerLink="/about" (click)="isCollapsed = true">About</a>
       <a class="nav-item nav-link mr-auto" routerLink="/contact" (click)="isCollapsed = true">Contact</a>
