@@ -11,10 +11,24 @@
   <div class="navbar-collapse sticky" [collapse]="isCollapsed">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link mr-auto" routerLink="/about" (click)="isCollapsed = true">About</a>
-      <a class="nav-item nav-link mr-auto" routerLink="/contact" (click)="isCollapsed = true">Contact</a>
-      <a class="nav-item nav-link mr-auto" routerLink="/references" (click)="isCollapsed = true">References</a>
-      <a class="nav-item nav-link mr-auto" routerLink="/experience" (click)="isCollapsed = true">Experience</a>
       <a class="nav-item nav-link mr-auto" routerLink="/skills" (click)="isCollapsed = true">Skills</a>
+      <a class="nav-item nav-link mr-auto" routerLink="/experience" (click)="isCollapsed = true">Experience</a>
+      <a class="nav-item nav-link mr-auto" routerLink (click)="openModal(template)" (click)="isCollapsed = true">References</a>
     </div>
   </div>
 </div>
+<ng-template #template>
+  <div class="modal-header">
+    <h4>References</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p class="text-center">Please contact me directly for a list of references.</p>
+    <hr>
+    <a class="btn btn-info btn-block" href="mailto:ZacharyScottHazen@gmail.com">{{ info.email }}</a>
+    <br>
+    <a class="btn btn-info btn-block" href="tel:{{ info.phone }}">{{ info.phone | phoneNumber }}</a>
+  </div>
+</ng-template>

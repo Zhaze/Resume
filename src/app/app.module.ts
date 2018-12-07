@@ -4,13 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { ContactComponent } from './contact/contact.component';
-import { ReferencesComponent } from './references/references.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PhoneNumberPipe } from './phone-number.pipe';
 
@@ -20,8 +19,6 @@ import { PhoneNumberPipe } from './phone-number.pipe';
     AboutComponent,
     SkillsComponent,
     ExperienceComponent,
-    ContactComponent,
-    ReferencesComponent,
     NavigationComponent,
     PhoneNumberPipe
   ],
@@ -29,7 +26,8 @@ import { PhoneNumberPipe } from './phone-number.pipe';
     BrowserModule,
     AppRoutingModule,
     CollapseModule.forRoot(),
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
