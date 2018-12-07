@@ -4,8 +4,7 @@ import { EXPERIENCE } from '../experience';
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss'],
-  providers: []
+  styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
   experience = EXPERIENCE;

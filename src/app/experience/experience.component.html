@@ -1,1 +1,28 @@
-
+<accordion *ngFor="let job of experience">
+  <accordion-group>
+    <div class="btn btn-link btn-block" accordion-heading>
+      <div class="d-md-flex justify-content-between">
+        <div class="job-title">
+          {{job.title}}
+        </div>
+        <div class="dates-worked">
+          {{job.startDate | date:'MMMM y'}}-{{job.endDate | date:'MMMM y'}}
+        </div>
+      </div>
+    </div>
+    <div class="company">
+      {{job.company}}
+    </div>
+    <hr>
+    <div class="row">
+      <div class="comments col-lg-6">
+        {{job.comments}}
+      </div>
+      <div class="description col-lg-6">
+        <ul class="description" *ngFor="let detail of job.description">
+          <li>{{detail}}</li>
+        </ul>
+      </div>
+    </div>
+  </accordion-group>
+</accordion>

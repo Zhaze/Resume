@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -11,7 +12,6 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReferencesComponent } from './references/references.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { PhoneNumberPipe } from './phone-number.pipe';
 
 @NgModule({
@@ -23,13 +23,13 @@ import { PhoneNumberPipe } from './phone-number.pipe';
     ContactComponent,
     ReferencesComponent,
     NavigationComponent,
-    JumbotronComponent,
     PhoneNumberPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
