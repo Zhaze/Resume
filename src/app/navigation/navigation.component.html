@@ -5,30 +5,30 @@
   </button>
   <div class="navbar-collapse sticky" [collapse]="isCollapsed">
     <div class="navbar-nav d-flex flex-sm-row justify-content-around">
-        <a class="nav-item nav-link" href="mailto:ZacharyScottHazen@gmail.com">{{ info.email }}</a>
-        <a class="nav-item nav-link" href="tel:{{ info.phone }}">{{ info.phone | phoneNumber }}</a>
+      <a class="nav-item nav-link" href="mailto:ZacharyScottHazen@gmail.com"><i class="ion-ios-mail"></i> {{ info.email }}</a>
+      <a class="nav-item nav-link" href="tel:{{ info.phone }}"><i class="ion-ios-call nav-item"></i> {{ info.phone | phoneNumber }}</a>
     </div>
-  <div class="navbar-collapse sticky" [collapse]="isCollapsed">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link mr-auto" routerLink="/about" (click)="isCollapsed = true">About</a>
-      <a class="nav-item nav-link mr-auto" routerLink="/skills" (click)="isCollapsed = true">Skills</a>
-      <a class="nav-item nav-link mr-auto" routerLink="/experience" (click)="isCollapsed = true">Experience</a>
-      <a class="nav-item nav-link mr-auto" routerLink (click)="openModal(template)" (click)="isCollapsed = true">References</a>
+    <div class="navbar-collapse sticky" [collapse]="isCollapsed">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link mr-auto" routerLink="/about" (click)="isCollapsed = true">About</a>
+        <a class="nav-item nav-link mr-auto" routerLink="/skills" (click)="isCollapsed = true">Skills</a>
+        <a class="nav-item nav-link mr-auto" routerLink="/experience" (click)="isCollapsed = true">Experience</a>
+        <a class="nav-item nav-link mr-auto" routerLink (click)="openModal(template)" (click)="isCollapsed = true">References</a>
+      </div>
     </div>
   </div>
-</div>
-<ng-template #template>
-  <div class="modal-header">
-    <h4>References</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <p class="text-center">Please contact me directly for a list of references.</p>
-    <hr>
-    <a class="btn btn-info btn-block" href="mailto:ZacharyScottHazen@gmail.com">{{ info.email }}</a>
-    <br>
-    <a class="btn btn-info btn-block" href="tel:{{ info.phone }}">{{ info.phone | phoneNumber }}</a>
-  </div>
-</ng-template>
+  <ng-template #template>
+    <div class="modal-header">
+      <h4>References</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="text-center">Please contact me directly for a list of references.</p>
+      <hr>
+      <a class="btn btn-info btn-block" href="mailto:ZacharyScottHazen@gmail.com"><i class="ion-ios-mail"></i> {{ info.email }}</a>
+      <br>
+      <a class="btn btn-info btn-block" href="tel:{{ info.phone }}"><i class="ion-ios-call"></i> {{ info.phone | phoneNumber }}</a>
+    </div>
+  </ng-template>
