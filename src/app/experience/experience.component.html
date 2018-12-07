@@ -1,3 +1,28 @@
-<p>
-  experience works!
-</p>
+<ngb-accordion #acc="ngbAccordion">
+  <ngb-panel *ngFor="let job of experience">
+    <ng-template ngbPanelTitle >
+      <div>{{job.title}}</div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <div class="d-flex justify-content-between">
+        <div class="company">
+          {{job.company}}
+        </div>
+        <div class="datesWorked">
+          <span>{{ job.startDate | date:'MMMM y' }} - {{ job.endDate | date:'MMMM y' }}</span>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="comments col-lg-6">
+          {{job.comments}}
+        </div>
+        <div class="description col-lg-6">
+          <ul class="description" *ngFor="let detail of job.description">
+            <li>{{detail}}</li>
+          </ul>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
