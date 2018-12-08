@@ -3,7 +3,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
-import { INFO } from '../info';
+import { INFO } from './info';
 
 @Component({
   selector: 'app-navigation',
@@ -12,8 +12,8 @@ import { INFO } from '../info';
 })
 
 export class NavigationComponent implements OnInit {
-  info = INFO
-  isCollapsed = true
+  info: Object = INFO;
+  isCollapsed: boolean = true;
   modalRef: BsModalRef;
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
