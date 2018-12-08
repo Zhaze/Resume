@@ -1,9 +1,11 @@
-<accordion *ngFor="let job of experience">
-  <accordion-group>
-    <div class="btn btn-link btn-block" accordion-heading>
+<accordion *ngFor="let job of experience; let i = index">
+  <accordion-group (click)="toggleShadow(i)">
+    <span class="btn btn-link btn-block" accordion-heading [class.shadow]="shadow[i]">
       <div class="d-md-flex justify-content-between">
         <div class="job-title">
-          {{job.title}}
+          <p class="align-middle">
+            {{job.title}}
+          </p>
         </div>
         <div class="dates-worked">
           <p>
@@ -11,19 +13,22 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="company">
-      {{job.company}}
-    </div>
-    <hr>
-    <div class="row">
-      <div class="comments col-lg-6">
-        {{job.comments}}
+    </span>
+    <div class="card h-100">
+      <div class="card-header">
+        {{job.company}}
       </div>
-      <div class="description col-lg-6">
-        <ul class="description" *ngFor="let detail of job.description">
-          <li>{{detail}}</li>
-        </ul>
+      <div class="card-body">
+        <div class="row">
+          <div class="comments col-md-6">
+            {{job.comments}}
+          </div>
+          <div class="description col-md-6">
+            <ul class="description" *ngFor="let detail of job.description">
+              <li>{{detail}}</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </accordion-group>

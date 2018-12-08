@@ -1,3 +1,13 @@
+@import '../variables';
+p {
+  margin:auto;
+}
+.shadow {
+  background-color: $navbar-dark-color;
+}
+.shadow, .card {
+  box-shadow: $card-shadow;
+}
 .job-title {
   font-weight: bold;
 }
