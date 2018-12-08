@@ -6,7 +6,7 @@
   <div class="navbar-collapse sticky" [collapse]="isCollapsed">
     <div class="navbar-nav d-flex flex-row justify-content-around">
       <a class="nav-item nav-link" href="mailto:{{ info.email }}"><i class="ion-ios-mail"></i></a>
-      <a class="nav-item nav-link" href="tel:{{ info.phone }}"><i class="ion-ios-call nav-item"></i></a>
+      <a class="nav-item nav-link" href="tel:{{ info.phone | phoneNumber }}"><i class="ion-ios-call nav-item"></i></a>
     </div>
     <div class="navbar-collapse sticky" [collapse]="isCollapsed">
       <div class="navbar-nav ml-auto">
@@ -33,7 +33,7 @@
             <a class="btn-block btn btn-info" href="mailto:{{ info.email }}"><i class="ion-ios-mail"></i></a>
           </div>
           <div class="col-6">
-            <a class="btn-block btn btn-info" href="tel:{{ info.phone }}"><i class="ion-ios-call"></i></a>
+            <a class="btn-block btn btn-info" href="tel:{{ info.phone | phoneNumber}}"><i class="ion-ios-call"></i></a>
           </div>
         </div>
       </div>

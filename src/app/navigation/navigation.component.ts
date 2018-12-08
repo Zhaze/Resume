@@ -3,6 +3,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
+import { Info } from './infoClass'
 import { INFO } from './info';
 
 @Component({
@@ -12,7 +13,7 @@ import { INFO } from './info';
 })
 
 export class NavigationComponent implements OnInit {
-  info: Object = INFO;
+  info: Info = INFO;
   isCollapsed: boolean = true;
   modalRef: BsModalRef;
   openModal(template: TemplateRef<any>) {
