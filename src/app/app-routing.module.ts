@@ -6,6 +6,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
+  { path: '', component: AboutComponent},
   { path: 'about', component: AboutComponent},
   { path: 'experience', component: ExperienceComponent},
   { path: 'skills', component: SkillsComponent}
