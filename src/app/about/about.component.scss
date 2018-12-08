@@ -1,0 +1,15 @@
+@import '../variables';
+
+.card {
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+}
+
+img {
+  height: $img-dimensions;
+  width: $img-dimensions;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 60px;
+  box-shadow: 2px 2px 20px 1px black;
+}
