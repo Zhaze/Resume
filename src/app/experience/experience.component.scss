@@ -2,14 +2,17 @@
 p {
   margin:auto;
 }
-.shadow {
-  background-color: $navbar-dark-color;
+.selected-job {
+  font-size: 1.8em;
 }
-.shadow, .card {
+.card {
   box-shadow: $card-shadow;
 }
 .job-title {
-  font-weight: bold;
+  font-size: 1.2em;
+}
+.company {
+  font-size: 1.5em
 }
 .dates-worked {
   font-style: italic;

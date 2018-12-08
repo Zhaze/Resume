@@ -9,9 +9,9 @@ import { EXPERIENCE } from './experience';
 })
 export class ExperienceComponent implements OnInit {
   experience: Experience[] = EXPERIENCE;
-  shadow = new Array(this.experience.length);
-  toggleShadow(i): void {
-    this.shadow[i] ? this.shadow.splice(i, 1, false) : this.shadow[i] = !this.shadow[i];
+  selectedJobs = new Array(this.experience.length);
+  toggleSelectedJobs(i): void {
+    this.selectedJobs[i] ? this.selectedJobs.splice(i, 1, false) : this.selectedJobs[i] = !this.selectedJobs[i];
   };
 
   constructor() {
