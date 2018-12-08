@@ -1,9 +1,10 @@
-body {
-  overflow-y: scroll;
-}
+$card-radius: 15px;
+$card-shadow: 5px 5px 20px 5px black;
+
+$img-dimensions: 20vw;
+
 $body-bg: #cfcfcf;
 $body-color: #000000;
-
 
 // Links
 $link-color: #000000;
