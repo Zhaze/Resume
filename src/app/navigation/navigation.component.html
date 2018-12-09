@@ -1,6 +1,4 @@
 <mat-sidenav-container class="sidenav-container">
-
-
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
     <mat-toolbar>
       <span>Menu</span>
@@ -20,11 +18,7 @@
       <a mat-list-item (click)="null">References</a>
     </mat-nav-list>
   </mat-sidenav>
-
-
   <mat-sidenav-content>
-
-
     <mat-toolbar-row>
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
@@ -32,7 +26,6 @@
       <span>{{ info.name }}</span>
 <span class="nav-spacer"></span>
 <div *ngIf="!(isHandset$ | async)">
-
   <a mat-icon-button href="tel:{{ info.phone }}" >
     <mat-icon>
       phone
@@ -64,15 +57,7 @@
     </a>
   </span>
 </div>
-
-
-
-
-
     </mat-toolbar-row>
-
     <router-outlet></router-outlet>
-
-
   </mat-sidenav-content>
 </mat-sidenav-container>
