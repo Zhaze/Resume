@@ -1,5 +1,5 @@
 <mat-accordion *ngFor="let job of experience; let i = index">
-  <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)">
+  <mat-expansion-panel (opened)="setStep(i)">
     <mat-expansion-panel-header>
       <mat-panel-title fxFlex="60%" class="job-title">
         {{job.title}}
