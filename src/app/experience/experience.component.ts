@@ -12,7 +12,7 @@ import { EXPERIENCE } from '../../data/experience';
 export class ExperienceComponent implements OnInit {
   experience: Experience[] = EXPERIENCE;
 
-  step = 0;
+  step = -1;
 
   setStep(index: number) {
     this.step = index;

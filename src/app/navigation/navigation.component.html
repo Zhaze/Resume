@@ -1,40 +1,78 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Menu</mat-toolbar>
+
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar>
+      <span>Menu</span>
+    </mat-toolbar>
     <mat-nav-list>
       <div mat-list-item class="contact-buttons">
-        <button mat-raised-button fxFlex="50%">
-          <mat-icon>
-            phone
-          </mat-icon>
-        </button>
-        <button mat-raised-button fxFlex>
-          <mat-icon>
-            email
-          </mat-icon>
-        </button>
-        </div>
+        <a mat-icon-button fxFlex>
+          <mat-icon>phone</mat-icon>
+        </a>
+        <a mat-icon-button fxFlex>
+          <mat-icon>email</mat-icon>
+        </a>
+      </div>
       <a mat-list-item routerLink="/about">About</a>
       <a mat-list-item routerLink="/skills">Skills</a>
       <a mat-list-item routerLink="/experience">Experience</a>
       <a mat-list-item (click)="null">References</a>
     </mat-nav-list>
   </mat-sidenav>
+
+
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+
+
+    <mat-toolbar-row>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>{{info.name}}</span>
-    </mat-toolbar>
+      <span>{{ info.name }}</span>
+<span class="nav-spacer"></span>
+<div *ngIf="!(isHandset$ | async)">
+
+  <a mat-icon-button href="tel:{{ info.phone }}" >
+    <mat-icon>
+      phone
+    </mat-icon>
+  </a>
+  <a mat-icon-button href="mailto: {{ info.email }}" >
+    <mat-icon>
+      email
+    </mat-icon>
+  </a>
+  <span>
+    <a mat-button routerLink="/about">
+      About
+    </a>
+  </span>
+  <span>
+    <a mat-button routerLink="/skills" >
+      Skills
+    </a>
+  </span>
+  <span>
+    <a mat-button routerLink="/experience" >
+      Experience
+    </a>
+  </span>
+  <span>
+    <a mat-button (click)="null" >
+      References
+    </a>
+  </span>
+</div>
+
+
+
+
+
+    </mat-toolbar-row>
+
     <router-outlet></router-outlet>
+
+
   </mat-sidenav-content>
 </mat-sidenav-container>
