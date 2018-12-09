@@ -24,39 +24,39 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>{{ info.name }}</span>
-<span class="nav-spacer"></span>
-<div *ngIf="!(isHandset$ | async)">
-  <a mat-icon-button href="tel:{{ info.phone }}" >
-    <mat-icon>
-      phone
-    </mat-icon>
-  </a>
-  <a mat-icon-button href="mailto: {{ info.email }}" >
-    <mat-icon>
-      email
-    </mat-icon>
-  </a>
-  <span>
-    <a mat-button routerLink="/about">
-      About
-    </a>
-  </span>
-  <span>
-    <a mat-button routerLink="/skills" >
-      Skills
-    </a>
-  </span>
-  <span>
-    <a mat-button routerLink="/experience" >
-      Experience
-    </a>
-  </span>
-  <span>
-    <a mat-button (click)="null" >
-      References
-    </a>
-  </span>
-</div>
+      <span class="nav-spacer"></span>
+      <div *ngIf="!(isHandset$ | async)">
+        <a mat-icon-button href="tel:{{ info.phone }}">
+          <mat-icon>
+            phone
+          </mat-icon>
+        </a>
+        <a mat-icon-button href="mailto: {{ info.email }}">
+          <mat-icon>
+            email
+          </mat-icon>
+        </a>
+        <span>
+          <a mat-button routerLink="/about">
+            About
+          </a>
+        </span>
+        <span>
+          <a mat-button routerLink="/skills">
+            Skills
+          </a>
+        </span>
+        <span>
+          <a mat-button routerLink="/experience">
+            Experience
+          </a>
+        </span>
+        <span>
+          <a mat-button (click)="null">
+            References
+          </a>
+        </span>
+      </div>
     </mat-toolbar-row>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
