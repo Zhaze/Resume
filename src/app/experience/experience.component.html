@@ -1,37 +1,18 @@
-<accordion *ngFor="let job of experience; let i = index">
-  <accordion-group (click)="toggleSelectedJobs(i)">
-    <span class="btn btn-link btn-block" accordion-heading>
-      <div class="d-md-flex justify-content-between">
-        <div class="job-title">
-          <p class="align-middle" [class.selected-job]="selectedJobs[i]">
-            {{job.title}}
-          </p>
-        </div>
-        <div class="dates-worked">
-          <p [class.selected-job]="selectedJobs[i]">
-            {{job.startDate | date:'MMMM y'}}-{{job.endDate | date:'MMMM y'}}
-          </p>
-        </div>
-      </div>
-    </span>
-    <div class="card h-100">
-      <div class="card-header">
-        <p class="company">
-          {{job.company}}
-        </p>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="comments col-md-6">
-            {{job.comments}}
-          </div>
-          <div class="description col-md-6">
-            <ul class="description" *ngFor="let detail of job.description">
-              <li>{{detail}}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<mat-accordion *ngFor="let job of experience; let i = index">
+  <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)">
+    <mat-expansion-panel-header>
+      <mat-panel-title fxFlex="60%" class="job-title">
+        {{job.title}}
+      </mat-panel-title>
+      <mat-panel-description fxFlex class="dates-worked">
+          {{job.startDate | date:'MMMM y'}}-{{job.endDate | date:'MMMM y'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    {{job.comments}}
+    <div class="description">
+      <ul *ngFor="let detail of job.description">
+        <li>{{detail}}</li>
+      </ul>
     </div>
-  </accordion-group>
-</accordion>
+  </mat-expansion-panel>
+</mat-accordion>

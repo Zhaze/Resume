@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Experience } from './experienceClass';
-import { EXPERIENCE } from './experience';
+
+import { Experience } from '../../data/experienceClass';
+import { EXPERIENCE } from '../../data/experience';
+
 
 @Component({
   selector: 'app-experience',
@@ -9,10 +11,20 @@ import { EXPERIENCE } from './experience';
 })
 export class ExperienceComponent implements OnInit {
   experience: Experience[] = EXPERIENCE;
-  selectedJobs = new Array(this.experience.length);
-  toggleSelectedJobs(i): void {
-    this.selectedJobs[i] ? this.selectedJobs.splice(i, 1, false) : this.selectedJobs[i] = !this.selectedJobs[i];
-  };
+
+  step = 0;
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
+  }
 
   constructor() {
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ABOUT } from './about';
+import { About } from '../../data/aboutClass';
+import { ABOUT } from '../../data/about';
 
 @Component({
   selector: 'app-about',
@@ -7,8 +8,7 @@ import { ABOUT } from './about';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  about: string = ABOUT;
-
+  about: About = ABOUT;
   constructor() { }
 
   ngOnInit() {

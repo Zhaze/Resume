@@ -1,41 +1,40 @@
-<div class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-  <a class="navbar-brand" routerLink="/" (click)="isCollapsed = true">{{ info.name }}</a>
-  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="navbar-collapse sticky" [collapse]="isCollapsed">
-    <div class="navbar-nav d-flex flex-row justify-content-around">
-      <a class="nav-item nav-link" href="mailto:{{ info.email }}"><i class="ion-ios-mail"></i></a>
-      <a class="nav-item nav-link" href="tel:{{ info.phone | phoneNumber }}"><i class="ion-ios-call nav-item"></i></a>
-    </div>
-    <div class="navbar-collapse sticky" [collapse]="isCollapsed">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link mr-auto" routerLink="/about" (click)="isCollapsed = true">About</a>
-        <a class="nav-item nav-link mr-auto" routerLink="/skills" (click)="isCollapsed = true">Skills</a>
-        <a class="nav-item nav-link mr-auto" routerLink="/experience" (click)="isCollapsed = true">Experience</a>
-        <a class="nav-item nav-link mr-auto" href="javascript:void(0)" (click)="openModal(template)" (click)="isCollapsed = true">References</a>
-      </div>
-    </div>
-  </div>
-  <ng-template #template>
-    <div class="modal-header">
-      <h4>References</h4>
-      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p class="text-center">Please contact me directly for a list of references.</p>
-      <hr>
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <a class="btn-block btn btn-info" href="mailto:{{ info.email }}"><i class="ion-ios-mail"></i></a>
-          </div>
-          <div class="col-6">
-            <a class="btn-block btn btn-info" href="tel:{{ info.phone | phoneNumber}}"><i class="ion-ios-call"></i></a>
-          </div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <div mat-list-item class="contact-buttons">
+        <button mat-raised-button fxFlex="50%">
+          <mat-icon>
+            phone
+          </mat-icon>
+        </button>
+        <button mat-raised-button fxFlex>
+          <mat-icon>
+            email
+          </mat-icon>
+        </button>
         </div>
-      </div>
-    </div>
-  </ng-template>
+      <a mat-list-item routerLink="/about">About</a>
+      <a mat-list-item routerLink="/skills">Skills</a>
+      <a mat-list-item routerLink="/experience">Experience</a>
+      <a mat-list-item (click)="null">References</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>{{info.name}}</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

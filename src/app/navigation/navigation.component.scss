@@ -1,6 +1,21 @@
-i{
-  font-size: 2em;
+.sidenav-container {
+  height: 100%;
 }
-.navbar {
-  box-shadow: 0px 2px 8px 3px black;
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.contact-buttons {
+  justify-content:space-around;
 }
