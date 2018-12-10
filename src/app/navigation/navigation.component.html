@@ -5,33 +5,33 @@
     </mat-toolbar>
     <mat-nav-list>
       <div mat-list-item fxLayout="row" fxLayoutAlign="space-around center" class="contact-buttons">
-        <a mat-button href="tel: {{ info.phone }}">
+        <a mat-icon-button href="tel: {{ info.phone }}">
           <mat-icon color="accent" matListIcon>phone</mat-icon>
         </a>
-        <a mat-button href="mailto: {{ info.email }}">
+        <a mat-icon-button href="mailto: {{ info.email }}">
           <mat-icon color="accent" matListIcon>email</mat-icon>
         </a>
       </div>
-      <a mat-list-item routerLink="/about"><p>About</p>About</a>
+      <a mat-list-item routerLink="/about">About</a>
       <a mat-list-item routerLink="/skills">Skills</a>
       <a mat-list-item routerLink="/experience">Experience</a>
       <a mat-list-item><references-side-nav></references-side-nav></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="accent">
+    <mat-toolbar color="primary" class="mat-primary mat-elevation-z6">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>{{ info.name }}</span>
       <span class="nav-spacer"></span>
       <div *ngIf="!(isHandset$ | async)">
-        <a mat-button href="tel:{{ info.phone }}">
+        <a mat-icon-button href="tel:{{ info.phone }}">
           <mat-icon>
             phone
           </mat-icon>
         </a>
-        <a mat-button href="mailto: {{ info.email }}">
+        <a mat-icon-button href="mailto: {{ info.email }}">
           <mat-icon>
             email
           </mat-icon>
