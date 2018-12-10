@@ -1,4 +1,15 @@
-.dates-worked {
+.dates-worked, .location {
   font-style: italic;
   justify-content: flex-end;
+  font-size: 1.2em;
+}
+.job-title, .company {
+  font-size: 1.3em;
+}
+.details-header, .details-body {
+  padding-top:  16px;
+  padding-bottom: 16px;
+}
+.description {
+  padding: 0px;
 }

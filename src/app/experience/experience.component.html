@@ -1,18 +1,33 @@
-<mat-accordion *ngFor="let job of experience; let i = index">
-  <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)">
-    <mat-expansion-panel-header>
-      <mat-panel-title fxFlex class="job-title">
-        {{job.title}}
-      </mat-panel-title>
-      <mat-panel-description fxFlex class="dates-worked">
+<mat-card class="accent">
+  <mat-accordion *ngFor="let job of experience; let i = index">
+    <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)">
+      <mat-expansion-panel-header [class.mat-raised-button]="step === i">
+        <mat-panel-title fxFlex class="job-title">
+          {{job.title}}
+        </mat-panel-title>
+        <mat-panel-description fxFlex class="dates-worked" *ngIf="!(isHandset$ | async)">
           {{job.startDate | date:'MMMM y'}}-{{job.endDate | date:'MMMM y'}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    {{job.comments}}
-    <div class="description">
-      <ul *ngFor="let detail of job.description">
-        <li>{{detail}}</li>
-      </ul>
-    </div>
-  </mat-expansion-panel>
-</mat-accordion>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="details-header" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
+        <span class="company">
+          {{ job.company }}
+        </span>
+        <span class="location">
+          {{ job.location }}
+        </span>
+      </div>
+      <mat-divider inset="true"></mat-divider>
+      <div class="details-body" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+        <div fxFlex class="comments">
+          {{job.comments}}
+        </div>
+        <div fxFlex>
+          <mat-list *ngFor="let detail of job.description">
+            <mat-list-item>{{detail}}</mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>

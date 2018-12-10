@@ -2,7 +2,7 @@ import { Experience } from './experienceClass';
 
 export const EXPERIENCE: Experience[] = [
   {
-    title: 'Web Design, Sytem Development, Consultant',
+    title: 'Web Design, Consultant',
     company: 'Self Employed',
     location: 'Denver, Colorado',
     startDate: new Date('07/01/2018'),
