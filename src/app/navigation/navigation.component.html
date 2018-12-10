@@ -3,19 +3,19 @@
     <mat-toolbar>
       <span>Menu</span>
     </mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list >
       <div mat-list-item class="contact-buttons">
         <a mat-icon-button fxFlex>
-          <mat-icon>phone</mat-icon>
+          <mat-icon matListIcon>phone</mat-icon>
         </a>
         <a mat-icon-button fxFlex>
-          <mat-icon>email</mat-icon>
+          <mat-icon matListIcon>email</mat-icon>
         </a>
       </div>
       <a mat-list-item routerLink="/about">About</a>
       <a mat-list-item routerLink="/skills">Skills</a>
       <a mat-list-item routerLink="/experience">Experience</a>
-      <a mat-list-item (click)="null">References</a>
+      <a mat-list-item><references-side-nav></references-side-nav></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -51,11 +51,7 @@
             Experience
           </a>
         </span>
-        <span>
-          <a mat-button (click)="null">
-            References
-          </a>
-        </span>
+        <references-top-nav></references-top-nav>
       </div>
     </mat-toolbar-row>
     <router-outlet></router-outlet>

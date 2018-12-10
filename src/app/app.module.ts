@@ -10,7 +10,9 @@ import { ExperienceComponent } from './experience/experience.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PhoneNumberPipe } from './phone-number.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReferencesComponent } from './references/references.component';
+import { ReferencesSideNav,
+         ReferencesTopNav,
+         ReferencesDialog } from './references/references.component';
 
 import {
   MatAutocompleteModule,
@@ -62,7 +64,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SkillsComponent,
     ExperienceComponent,
     NavigationComponent,
-    ReferencesComponent,
+    ReferencesTopNav,
+    ReferencesSideNav,
+    ReferencesDialog,
     PhoneNumberPipe
   ],
   imports: [
@@ -104,8 +108,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatTreeModule,
     LayoutModule,
     FlexLayoutModule
+    ],
+    entryComponents: [
+      ReferencesSideNav,
+      ReferencesTopNav,
+      ReferencesDialog
     ],
   bootstrap: [AppComponent]
 })

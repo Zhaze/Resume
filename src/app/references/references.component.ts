@@ -1,19 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { MatDialog } from '@angular/material';
+
+import { Info } from '../../data/infoClass'
+import { INFO } from '../../data/info'
 
 @Component({
-  selector: 'app-references',
-  templateUrl: './references.component.html',
+  selector: 'references-side-nav',
+  templateUrl: './references.component.side-nav.html',
   styleUrls: ['./references.component.scss']
 })
-export class ReferencesComponent implements OnInit {
-
-
-  constructor() {
-
+export class ReferencesSideNav {
+  constructor(public referencesDialog: MatDialog) {}
+  info: Info = INFO;
+  openReferences(): void {
+    this.referencesDialog.open(ReferencesDialog, {
+      width: '250px'
+    });
   }
+}
 
-
-  ngOnInit() {
+@Component({
+  selector: 'references-top-nav',
+  templateUrl: './references.component.top-nav.html',
+  styleUrls: ['./references.component.scss']
+})
+export class ReferencesTopNav {
+  constructor(public referencesDialog: MatDialog) {}
+  info: Info = INFO;
+  openReferences(): void {
+    this.referencesDialog.open(ReferencesDialog, {
+      width: '250px'
+    });
   }
+}
 
+@Component({
+  selector: 'app-references-dialog',
+  templateUrl: './references.component.dialog.html',
+  styleUrls: ['./references.component.scss']
+})
+export class ReferencesDialog {
+  constructor() {}
 }
