@@ -1,7 +1,10 @@
 <mat-sidenav-container class="sidenav-container" color="primary">
-  <mat-sidenav #drawer [autoFocus]="false" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'">
-    <mat-toolbar color="primary">
-      <span>Menu</span>
+  <mat-sidenav #drawer [autoFocus]="false" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" mode="push" position="start">
+    <mat-toolbar color="primary" class="mat-elevation-z6">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="site-header">{{ info. name }}</span>
     </mat-toolbar>
     <mat-nav-list>
       <div mat-list-item fxLayout="row" fxLayoutAlign="space-around center" class="contact-buttons">
@@ -12,18 +15,23 @@
           <mat-icon color="accent" matListIcon>email</mat-icon>
         </a>
       </div>
-      <a mat-list-item routerLink="/about">About</a>
-      <a mat-list-item routerLink="/skills">Skills</a>
-      <a mat-list-item routerLink="/experience">Experience</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/about" (click)="drawer.toggle()">About</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/skills" (click)="drawer.toggle()">Skills</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/experience" (click)="drawer.toggle()">Experience</a>
+      <mat-divider></mat-divider>
       <a mat-list-item><references-side-nav></references-side-nav></a>
+      <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="mat-primary mat-elevation-z6">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset$ | async)">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>{{ info.name }}</span>
+      <span class="site-header">{{ info.name }}</span>
       <span class="nav-spacer"></span>
       <div *ngIf="!(isHandset$ | async)">
         <a mat-icon-button href="tel:{{ info.phone }}">
