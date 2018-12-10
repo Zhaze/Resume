@@ -1,7 +1,9 @@
 .dates-worked, .location {
-  font-style: italic;
   justify-content: flex-end;
   font-size: 1.2em;
+}
+.dates-worked {
+  font-style: italic;
 }
 .job-title, .company {
   font-size: 1.3em;
@@ -10,6 +12,10 @@
   padding-top:  16px;
   padding-bottom: 16px;
 }
-.description {
-  padding: 0px;
+ul, .list-divider, .comments {
+  padding: 3px;
+}
+ul {
+  margin: 0px;
+  list-style-type: none;
 }

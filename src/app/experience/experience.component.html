@@ -6,7 +6,7 @@
           {{job.title}}
         </mat-panel-title>
         <mat-panel-description fxFlex class="dates-worked" *ngIf="!(isHandset$ | async)">
-          {{job.startDate | date:'MMMM y'}}-{{job.endDate | date:'MMMM y'}}
+          {{ job.startDate | date:'MMMM y' }}-{{ job.endDate | date:'MMMM y' }}
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="details-header" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
@@ -16,16 +16,22 @@
         <span class="location">
           {{ job.location }}
         </span>
+        <span *ngIf="(isHandset$ | async)">
+          {{ job.startDate | date:'MMMM y' }}-{{ job.endDate | date:'MMMM y' }}
+        </span>
       </div>
       <mat-divider inset="true"></mat-divider>
       <div class="details-body" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
         <div fxFlex class="comments">
-          {{job.comments}}
+          {{ job.comments }}
         </div>
         <div fxFlex>
-          <mat-list *ngFor="let detail of job.description">
-            <mat-list-item>{{detail}}</mat-list-item>
-          </mat-list>
+          <ul>
+            <li *ngFor="let detail of job.description">
+              {{ detail }}
+              <mat-divider inset="true" class="list-divider"></mat-divider>
+            </li>
+          </ul>
         </div>
       </div>
     </mat-expansion-panel>
