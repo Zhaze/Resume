@@ -15,7 +15,8 @@ export class ReferencesSideNav {
 
   openReferences(): void {
     this.referencesDialog.open(ReferencesDialog, {
-      width: '250px'
+      restoreFocus: false,
+      autoFocus: false
     });
   }
 }
@@ -30,7 +31,8 @@ export class ReferencesTopNav {
 
   openReferences(): void {
     this.referencesDialog.open(ReferencesDialog, {
-      width: '250px'
+      restoreFocus: false,
+      autoFocus: false
     });
   }
 }

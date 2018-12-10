@@ -1,13 +1,13 @@
-<h1 mat-dialog-title color="primary">References</h1>
-<div mat-dialog-content>
+<h1 mat-dialog-title fxLayout="row" fxLayoutAlign="space-around center">References</h1>
+<div mat-dialog-content fxLayout="row" fxLayoutAlign="space-around center">
   <p>Please contact me directly for references.</p>
   <mat-divider></mat-divider>
 </div>
-<div mat-dialog-actions class="contact-buttons">
-  <a mat-icon-button href="tel: {{info.phone }}">
+<div mat-dialog-actions class="contact-buttons" fxLayout="row" fxLayoutAlign="space-around center">
+  <a mat-button href="tel: {{info.phone }}">
     <mat-icon>phone</mat-icon>
   </a>
-  <a mat-icon-button href="mailto: {{ info.email }}">
+  <a mat-button href="mailto: {{ info.email }}">
     <mat-icon>email</mat-icon>
   </a>
 </div>
