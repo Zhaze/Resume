@@ -2,8 +2,12 @@
 <div mat-dialog-content>
   <p>Please contact me directly for references.</p>
   <mat-divider></mat-divider>
-  <div class="contact" color="secondary">
-    <a mat-icon-button href="tel: {{info.phone }}" fxFlex="50%"><mat-icon>phone</mat-icon></a>
-    <a mat-icon-button href="mailto: {{ info.email }}" fxFlex><mat-icon>email</mat-icon></a>
-  </div>
+</div>
+<div mat-dialog-actions class="contact-buttons">
+  <a mat-icon-button href="tel: {{info.phone }}">
+    <mat-icon>phone</mat-icon>
+  </a>
+  <a mat-icon-button href="mailto: {{ info.email }}">
+    <mat-icon>email</mat-icon>
+  </a>
 </div>

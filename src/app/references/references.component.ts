@@ -12,7 +12,7 @@ import { INFO } from '../../data/info'
 })
 export class ReferencesSideNav {
   constructor(public referencesDialog: MatDialog) {}
-  info: Info = INFO;
+
   openReferences(): void {
     this.referencesDialog.open(ReferencesDialog, {
       width: '250px'
@@ -27,7 +27,7 @@ export class ReferencesSideNav {
 })
 export class ReferencesTopNav {
   constructor(public referencesDialog: MatDialog) {}
-  info: Info = INFO;
+
   openReferences(): void {
     this.referencesDialog.open(ReferencesDialog, {
       width: '250px'
@@ -41,5 +41,6 @@ export class ReferencesTopNav {
   styleUrls: ['./references.component.scss']
 })
 export class ReferencesDialog {
+  info: Info = INFO;
   constructor() {}
 }

@@ -1,14 +1,14 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
+  <mat-sidenav #drawer class="sidenav" [autoFocus]="false" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'">
     <mat-toolbar>
       <span>Menu</span>
     </mat-toolbar>
     <mat-nav-list >
-      <div mat-list-item class="contact-buttons">
-        <a mat-icon-button fxFlex>
+      <div mat-list-item fxLayout="row" fxLayoutAlign="space-around center" class="contact-buttons">
+        <a mat-button href="tel: {{ info.phone }}">
           <mat-icon matListIcon>phone</mat-icon>
         </a>
-        <a mat-icon-button fxFlex>
+        <a mat-button href="mailto: {{ info.email }}">
           <mat-icon matListIcon>email</mat-icon>
         </a>
       </div>
@@ -19,19 +19,19 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar-row>
+    <mat-toolbar-row color="primary">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>{{ info.name }}</span>
       <span class="nav-spacer"></span>
       <div *ngIf="!(isHandset$ | async)">
-        <a mat-icon-button href="tel:{{ info.phone }}">
+        <a mat-button href="tel:{{ info.phone }}">
           <mat-icon>
             phone
           </mat-icon>
         </a>
-        <a mat-icon-button href="mailto: {{ info.email }}">
+        <a mat-button href="mailto: {{ info.email }}">
           <mat-icon>
             email
           </mat-icon>
