@@ -1,4 +1,4 @@
-<mat-card class="accent">
+<mat-card>
   <mat-accordion *ngFor="let job of experience; let i = index">
     <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)">
       <mat-expansion-panel-header [class.mat-raised-button]="step === i">
