@@ -1,4 +1,39 @@
-<mat-sidenav-container class="sidenav-container" color="primary" [hasBackdrop]="false" autosize>
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <button type="button" mat-icon-button aria-label="Toggle sidenav" (click)="drawer.toggle()" *ngIf="(isHandset$ | async)">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span class="site-header">{{ info.name }}</span>
+  <span class="nav-spacer"></span>
+  <div *ngIf="!(isHandset$ | async)">
+    <a mat-icon-button href="tel:{{ info.phone }}">
+      <mat-icon>
+        phone
+      </mat-icon>
+    </a>
+    <a mat-icon-button href="mailto: {{ info.email }}">
+      <mat-icon>
+        email
+      </mat-icon>
+    </a>
+    <span>
+      <a mat-button routerLink="/about">
+        About
+      </a>
+    </span>
+    <span>
+      <a mat-button routerLink="/skills">
+        Skills
+      </a>
+    </span>
+    <span>
+      <a mat-button routerLink="/experience">
+        Experience
+      </a>
+    </span>
+    <references-top-nav></references-top-nav>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container" color="primary" [hasBackdrop]="false">
   <mat-sidenav #drawer [autoFocus]="false" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" mode="over" position="start">
     <mat-nav-list>
       <div mat-list-item fxLayout="row" fxLayoutAlign="space-around center" class="contact-buttons">
@@ -10,52 +45,19 @@
         </a>
       </div>
       <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/about" (click)="drawer.toggle()">About</a>
+      <a mat-list-item routerLink="/about" (click)="drawer.close()">About</a>
       <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/skills" (click)="drawer.toggle()">Skills</a>
+      <a mat-list-item routerLink="/skills" (click)="drawer.close()">Skills</a>
       <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/experience" (click)="drawer.toggle()">Experience</a>
+      <a mat-list-item routerLink="/experience" (click)="drawer.close()">Experience</a>
       <mat-divider></mat-divider>
-      <a mat-list-item><references-side-nav></references-side-nav></a>
+      <a mat-list-item>
+        <references-side-nav></references-side-nav>
+      </a>
       <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary" class="mat-primary mat-elevation-z6">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset$ | async)">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span class="site-header">{{ info.name }}</span>
-      <span class="nav-spacer"></span>
-      <div *ngIf="!(isHandset$ | async)">
-        <a mat-icon-button href="tel:{{ info.phone }}">
-          <mat-icon>
-            phone
-          </mat-icon>
-        </a>
-        <a mat-icon-button href="mailto: {{ info.email }}">
-          <mat-icon>
-            email
-          </mat-icon>
-        </a>
-        <span>
-          <a mat-button routerLink="/about">
-            About
-          </a>
-        </span>
-        <span>
-          <a mat-button routerLink="/skills">
-            Skills
-          </a>
-        </span>
-        <span>
-          <a mat-button routerLink="/experience">
-            Experience
-          </a>
-        </span>
-        <references-top-nav></references-top-nav>
-      </div>
-    </mat-toolbar>
+  <mat-sidenav-content fullscreen="true">
     <app-breadcrumb></app-breadcrumb>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
