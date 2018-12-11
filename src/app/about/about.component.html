@@ -1,26 +1,32 @@
-<mat-card class="img-card">
-  <div class="profile-img">
-    <img src="./assets/img/profile.jpg" alt="Zac Hazen" />
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+  <div>
+    <mat-card class="img-card" [@slideInFromRight]="isOnScreen ? 'onScreen' : 'offScreen'">
+      <div class="profile-img">
+        <img src="./assets/img/profile.jpg" alt="Zac Hazen"/>
+      </div>
+    </mat-card>
   </div>
-</mat-card>
-<mat-card class="details-card">
-  <mat-card class="inner-card">
-    <p>
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-      {{ about.details }}
-    </p>
-  </mat-card>
-</mat-card>
+  <div>
+    <mat-card class="details-card" [@fadeIn]="isOnScreen ? 'onScreen' : 'offScreen'">
+
+        <p>
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+          {{ about.details }}
+        </p>
+
+    </mat-card>
+  </div>
+</div>
