@@ -27,3 +27,11 @@
 .site-header {
   padding-left: 16px;
 }
+
+//fixes a drop in height on the navigation bar when scaling the screen down.
+@media (max-width: 599px) {
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    height: 64px;
+  }
+}
