@@ -1,6 +1,6 @@
-<mat-card>
-  <mat-accordion *ngFor="let job of experience; let i = index">
-    <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)">
+<mat-card class="experience-container">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let job of experience; let i = index" [expanded]="step === i" (opened)="setStep(i)">
       <mat-expansion-panel-header [class.mat-raised-button]="step === i">
         <mat-panel-title fxFlex class="job-title">
           {{job.title}}

@@ -1,21 +1,52 @@
-.dates-worked, .location {
+.experience-container {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  margin-left: 26px;
+  padding: 26px 0px 26px 26px;
+  border-radius: 50px 0 0 50px;
+}
+
+.mat-accordion {
+  .mat-expansion-panel {
+    &:first-of-type {
+      border-radius: 50px 0 0 0;
+    }
+    &:last-of-type {
+      border-radius: 0 0 0 50px;
+    }
+    border-radius: 0 0 0 0;
+  }
+}
+
+.dates-worked,
+.location {
   justify-content: flex-end;
   font-size: 1.2em;
 }
+
 .dates-worked {
   font-style: italic;
 }
-.job-title, .company {
+
+.company,
+.job-title {
+  padding-left: 26px;
   font-size: 1.3em;
 }
-.details-header, .details-body {
-  padding-top:  16px;
+
+.details-body,
+.details-header {
+  padding-top: 16px;
   padding-bottom: 16px;
 }
-ul, .list-divider, .comments {
+
+.comments,
+.list-divider,
+ul {
   padding: 3px;
 }
+
 ul {
-  margin: 0px;
+  margin: 0;
   list-style-type: none;
 }
