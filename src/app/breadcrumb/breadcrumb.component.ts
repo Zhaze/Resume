@@ -6,11 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./breadcrumb.component.scss']
 })
 export class BreadcrumbComponent implements OnInit {
-  page: string = this.router.url;
+  page = 'Home';
   constructor(private router: Router) {
     router.events.subscribe(() => {
-      this.page = router.url;
-    })
+      if (router.url == '/') {
+        this.page = 'Home';
+      } else {
+        this.page = router.url;
+      }
+    });
   }
   ngOnInit() {
 
