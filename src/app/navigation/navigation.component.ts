@@ -12,7 +12,6 @@ import { INFO } from '../../data/info';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-
   info: Info = INFO;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
