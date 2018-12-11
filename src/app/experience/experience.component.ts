@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { Experience } from '../../data/experienceClass';
 import { EXPERIENCE } from '../../data/experience';
@@ -29,14 +27,12 @@ export class ExperienceComponent implements OnInit {
     this.step--;
   }
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+  isSmallScreen: boolean;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
+  constructor(private breakpointObserver: BreakpointObserver) { }
   ngOnInit() {
-  };
-
+    this.breakpointObserver.observe(['(max-width: 959px)']).subscribe((x): void => {
+      this.isSmallScreen = x.matches;
+    })
+  }
 };

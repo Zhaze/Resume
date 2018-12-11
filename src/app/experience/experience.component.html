@@ -5,7 +5,7 @@
         <mat-panel-title fxFlex class="job-title">
           {{job.title}}
         </mat-panel-title>
-        <mat-panel-description fxFlex class="dates-worked" *ngIf="!(isHandset$ | async)">
+        <mat-panel-description fxFlex class="dates-worked" *ngIf="!isSmallScreen">
           {{ job.startDate | date:'MMMM y' }}-{{ job.endDate | date:'MMMM y' }}
         </mat-panel-description>
       </mat-expansion-panel-header>
@@ -16,7 +16,7 @@
         <span class="location">
           {{ job.location }}
         </span>
-        <span *ngIf="(isHandset$ | async)">
+        <span *ngIf="isSmallScreen">
           {{ job.startDate | date:'MMMM y' }}-{{ job.endDate | date:'MMMM y' }}
         </span>
       </div>
