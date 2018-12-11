@@ -9,10 +9,10 @@
 .mat-accordion {
   .mat-expansion-panel {
     &:first-of-type {
-      border-radius: 50px 0 0 0;
+      border-radius: 35px 0 0 0;
     }
     &:last-of-type {
-      border-radius: 0 0 0 50px;
+      border-radius: 0 0 0 35px;
     }
     border-radius: 0 0 0 0;
   }
@@ -21,7 +21,6 @@
 .dates-worked,
 .location {
   justify-content: flex-end;
-  font-size: 1.2em;
 }
 
 .dates-worked {
@@ -30,8 +29,8 @@
 
 .company,
 .job-title {
+  white-space: normal;
   padding-left: 26px;
-  font-size: 1.3em;
 }
 
 .details-body,
