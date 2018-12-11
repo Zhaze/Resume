@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 import { Info } from '../../data/infoClass'
 import { INFO } from '../../data/info';
@@ -13,12 +12,12 @@ import { INFO } from '../../data/info';
 })
 export class NavigationComponent {
   info: Info = INFO;
+  isSmallScreen: boolean;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
+  constructor(private breakpointObserver: BreakpointObserver) { }
+  ngOnInit() {
+    this.breakpointObserver.observe(['(max-width: 959px)']).subscribe((x): void => {
+      this.isSmallScreen = x.matches;
+    })
+  }
 }

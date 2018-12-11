@@ -1,10 +1,10 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
-  <button type="button" mat-icon-button aria-label="Toggle sidenav" (click)="drawer.toggle()" *ngIf="(isHandset$ | async)">
+  <button type="button" mat-icon-button aria-label="Toggle sidenav" (click)="drawer.toggle()" *ngIf="isSmallScreen">
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span class="site-header">{{ info.name }}</span>
   <span class="nav-spacer"></span>
-  <div *ngIf="!(isHandset$ | async)">
+  <div *ngIf="!isSmallScreen">
     <a mat-icon-button href="tel:{{ info.phone }}">
       <mat-icon>
         phone
@@ -34,7 +34,7 @@
   </div>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container" color="primary" [hasBackdrop]="false">
-  <mat-sidenav #drawer [autoFocus]="false" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" mode="over" position="start">
+  <mat-sidenav #drawer [autoFocus]="false" fixedInViewport="true" [attr.role]="isSmallScreen ? 'dialog' : 'navigation'" mode="over" position="start">
     <mat-nav-list>
       <div mat-list-item fxLayout="row" fxLayoutAlign="space-around center" class="contact-buttons">
         <a mat-icon-button href="tel: {{ info.phone }}">
@@ -57,7 +57,7 @@
       <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content fullscreen="true">
+  <mat-sidenav-content>
     <app-breadcrumb></app-breadcrumb>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
