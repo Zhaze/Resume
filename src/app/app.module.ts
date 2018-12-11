@@ -55,6 +55,8 @@ import {
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { BreadcrumbPipe } from './breadcrumb.pipe';
 
 
 @NgModule({
@@ -67,7 +69,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReferencesTopNav,
     ReferencesSideNav,
     ReferencesDialog,
-    PhoneNumberPipe
+    PhoneNumberPipe,
+    BreadcrumbComponent,
+    BreadcrumbPipe
   ],
   imports: [
     BrowserModule,
