@@ -1,0 +1,32 @@
+.img-card {
+  border-radius: 0px 9999px 9999px 0px;
+  margin-top: 25px;
+  margin-right: 25px;
+  padding-left: 0px;
+  width: 285px;
+
+  .profile-img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    img {
+      border-radius: 0px 9999px 9999px 0px;
+      box-shadow: 0px 0px 8px 0px #000;
+      display: block;
+      width:269px;
+      height: auto;
+    }
+  }
+}
+
+.details-card {
+  border-radius: 10px 0px 0px 10px;
+  margin-top: 25px;
+  margin-left: 25px;
+  padding-right: 0px;
+  .inner-card {
+    box-shadow: 0px 0px 8px 0px #000;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+}
