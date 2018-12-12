@@ -17,7 +17,6 @@ export class NavigationComponent {
   getReferences(): void {
     this.referencesService.openReferences();
   }
-
   constructor(private breakpointObserver: BreakpointObserver,
               private referencesService: ReferencesService) {}
   ngOnInit() {
