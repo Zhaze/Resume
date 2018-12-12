@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { ReferencesService } from '../references/references.service';
+
 import { Info } from '../../data/infoClass'
 import { INFO } from '../../data/info';
 
@@ -18,7 +19,7 @@ export class NavigationComponent {
   }
 
   constructor(private breakpointObserver: BreakpointObserver,
-              public referencesService: ReferencesService) {}
+              private referencesService: ReferencesService) {}
   ngOnInit() {
     this.breakpointObserver.observe(['(max-width: 959px)']).subscribe((x): void => {
       this.isSmallScreen = x.matches;
