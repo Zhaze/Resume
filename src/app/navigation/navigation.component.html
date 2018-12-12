@@ -36,9 +36,9 @@
       </a>
     </span>
   </div>
-  <span>
     <mat-slide-toggle (click)="toggle()"></mat-slide-toggle>
-  </span>
+    <mat-icon mat-button class="light-theme-icon" *ngIf="theme === 'light'">brightness_5</mat-icon>
+    <mat-icon mat-button class="dark-theme-icon" *ngIf="theme === 'dark'">brightness_3</mat-icon>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container" color="primary" [hasBackdrop]="false">
   <mat-sidenav #drawer [autoFocus]="false" fixedInViewport="true" [attr.role]="isSmallScreen ? 'dialog' : 'navigation'" mode="over" position="start">

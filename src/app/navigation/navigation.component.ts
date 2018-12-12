@@ -12,12 +12,14 @@ import { INFO } from '../../data/info';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  @Output() themeToggle = new EventEmitter<boolean>();
-  toggle(): void {
-    this.themeToggle.emit();
-  }
+  theme: string = 'light';
   info: Info = INFO;
   isSmallScreen: boolean;
+  @Output() themeToggle = new EventEmitter<any>();
+  toggle(): void {
+    this.theme === "light" ? this.theme = 'dark' :  this.theme = 'light';
+    this.themeToggle.emit({theme: this.theme});
+  }
   getReferences(): void {
     this.referencesService.openReferences();
   }
