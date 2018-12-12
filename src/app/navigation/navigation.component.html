@@ -30,7 +30,11 @@
         Experience
       </a>
     </span>
-    <references-top-nav></references-top-nav>
+    <span>
+      <a mat-button (click)="getReferences()">
+        References
+      </a>
+    </span>
   </div>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container" color="primary" [hasBackdrop]="false">
@@ -51,9 +55,7 @@
       <mat-divider></mat-divider>
       <a mat-list-item routerLink="/experience" (click)="drawer.close()">Experience</a>
       <mat-divider></mat-divider>
-      <a mat-list-item>
-        <references-side-nav></references-side-nav>
-      </a>
+      <a mat-list-item (click)="getReferences()" (click)="drawer.close()">References</a>
       <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>

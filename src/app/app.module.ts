@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -9,10 +10,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PhoneNumberPipe } from './phone-number.pipe';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReferencesSideNav,
-         ReferencesTopNav,
-         ReferencesDialog } from './references/references.component';
+import { ReferencesComponent } from './references/references.component'
 
 import {
   MatAutocompleteModule,
@@ -66,12 +64,10 @@ import { BreadcrumbPipe } from './breadcrumb.pipe';
     SkillsComponent,
     ExperienceComponent,
     NavigationComponent,
-    ReferencesTopNav,
-    ReferencesSideNav,
-    ReferencesDialog,
-    PhoneNumberPipe,
+    ReferencesComponent,
     BreadcrumbComponent,
-    BreadcrumbPipe
+    BreadcrumbPipe,
+    PhoneNumberPipe
   ],
   imports: [
     BrowserModule,
@@ -117,9 +113,7 @@ import { BreadcrumbPipe } from './breadcrumb.pipe';
     FlexLayoutModule
     ],
     entryComponents: [
-      ReferencesSideNav,
-      ReferencesTopNav,
-      ReferencesDialog
+      ReferencesComponent
     ],
   bootstrap: [AppComponent]
 })

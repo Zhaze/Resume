@@ -1,48 +1,14 @@
 import { Component } from '@angular/core';
 
-import { MatDialog } from '@angular/material';
-
 import { Info } from '../../data/infoClass'
 import { INFO } from '../../data/info'
 
 @Component({
-  selector: 'references-side-nav',
-  templateUrl: './references.component.side-nav.html',
+  selector: 'app-references',
+  templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss']
 })
-export class ReferencesSideNav {
-  constructor(public referencesDialog: MatDialog) {}
-
-  openReferences(): void {
-    this.referencesDialog.open(ReferencesDialog, {
-      restoreFocus: false,
-      autoFocus: false
-    });
-  }
-}
-
-@Component({
-  selector: 'references-top-nav',
-  templateUrl: './references.component.top-nav.html',
-  styleUrls: ['./references.component.scss']
-})
-export class ReferencesTopNav {
-  constructor(public referencesDialog: MatDialog) {}
-
-  openReferences(): void {
-    this.referencesDialog.open(ReferencesDialog, {
-      restoreFocus: false,
-      autoFocus: false
-    });
-  }
-}
-
-@Component({
-  selector: 'app-references-dialog',
-  templateUrl: './references.component.dialog.html',
-  styleUrls: ['./references.component.scss']
-})
-export class ReferencesDialog {
+export class ReferencesComponent {
   info: Info = INFO;
   constructor() {}
 }
