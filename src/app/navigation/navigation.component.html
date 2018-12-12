@@ -35,10 +35,10 @@
         References
       </a>
     </span>
-    <span>
-      <mat-slide-toggle (click)="toggle()"></mat-slide-toggle>
-    </span>
   </div>
+  <span>
+    <mat-slide-toggle (click)="toggle()"></mat-slide-toggle>
+  </span>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container" color="primary" [hasBackdrop]="false">
   <mat-sidenav #drawer [autoFocus]="false" fixedInViewport="true" [attr.role]="isSmallScreen ? 'dialog' : 'navigation'" mode="over" position="start">
