@@ -21,7 +21,7 @@ import { ABOUT } from '../../data/about';
           transform: 'translateX(-100%)',
           opacity: '0'
         }),
-        animate('0.5s 0.5s ease-out')
+        animate('0.5s 0.7s ease-out')
       ])
     ]),
     trigger('fadeIn', [
@@ -36,7 +36,6 @@ import { ABOUT } from '../../data/about';
 })
 export class AboutComponent implements OnInit {
   about: About = ABOUT;
-  isOnScreen: boolean = true;
 
   constructor() { }
 

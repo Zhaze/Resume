@@ -1,13 +1,13 @@
 <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
   <div>
-    <mat-card class="img-card" [@slideInFromRight]="isOnScreen ? 'onScreen' : 'offScreen'">
+    <mat-card class="img-card" [@slideInFromRight]="true">
       <div class="profile-img">
         <img src="./assets/img/profile.jpg" alt="Zac Hazen"/>
       </div>
     </mat-card>
   </div>
   <div>
-    <mat-card class="details-card" [@fadeIn]="isOnScreen ? 'onScreen' : 'offScreen'">
+    <mat-card class="details-card" [@fadeIn]="true">
 
         <p>
           {{ about.details }}
