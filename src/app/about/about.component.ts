@@ -21,7 +21,7 @@ import { ABOUT } from '../../data/about';
           transform: 'translateX(-100%)',
           opacity: '0'
         }),
-        animate('0.5s 0.7s ease-out')
+        animate('0.3s 0.7s ease-out')
       ])
     ]),
     trigger('fadeIn', [
@@ -29,7 +29,7 @@ import { ABOUT } from '../../data/about';
         style({
           opacity: '0'
         }),
-        animate('1s 0s ease-out')
+        animate('.5s 0s ease-out')
       ])
     ])
   ]
