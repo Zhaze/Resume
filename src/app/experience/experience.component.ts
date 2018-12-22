@@ -13,17 +13,17 @@ import { EXPERIENCE } from '../../data/experience';
 export class ExperienceComponent implements OnInit {
   experience: Experience[] = EXPERIENCE;
 
-  step = -1;
+  step: number = -1;
 
-  setStep(index: number) {
+  setStep(index: number): void {
     this.step = index;
   }
 
-  nextStep() {
+  nextStep(): void {
     this.step++;
   }
 
-  prevStep() {
+  prevStep(): void {
     this.step--;
   }
 
