@@ -2,8 +2,19 @@
   margin-top: 26px;
   margin-bottom: 26px;
   margin-left: 26px;
-  padding: 26px 0px 26px 26px;
+  padding: 26px 0 26px 26px;
   border-radius: 50px 0 0 50px;
+  animation-name: fade-in;
+  animation-duration: .5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .mat-accordion {
@@ -11,6 +22,7 @@
     &:first-of-type {
       border-radius: 35px 0 0 0;
     }
+
     &:last-of-type {
       border-radius: 0 0 0 35px;
     }
@@ -21,6 +33,7 @@
 .dates-worked,
 .location {
   justify-content: flex-end;
+  padding-right: 26px;
 }
 
 .dates-worked {
@@ -32,6 +45,14 @@
   white-space: normal;
   padding-left: 26px;
 }
+@media (max-width: 599px) {
+  .company {
+    padding-left: 0;
+  }
+  .dates-worked, .location {
+    padding-right: 0px;
+  }
+}
 
 .details-body,
 .details-header {
@@ -40,8 +61,11 @@
 }
 
 .comments,
-.list-divider,
-ul {
+.details {
+  padding: 0 12px 12px;
+}
+
+.list-divider {
   padding: 3px;
 }
 
