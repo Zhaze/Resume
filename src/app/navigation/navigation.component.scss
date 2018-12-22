@@ -1,5 +1,6 @@
-.sidenav-container {
-  min-height: 100%;
+.nav-spacer,
+mat-sidenav-container {
+  flex: 1 1 auto;
 }
 
 .sidenav .mat-toolbar {
@@ -15,15 +16,9 @@
 .contact-buttons {
   justify-content: space-around;
 }
-.light-theme-icon, .dark-theme-icon{
-  padding: 0px 4px 0px 4px;
-}
+
 .dark-theme-icon {
   transform: rotate(45deg);
-}
-
-.nav-spacer {
-  flex: 1 1 auto;
 }
 
 .site-header {
