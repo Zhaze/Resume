@@ -1,1 +1,1 @@
-<app-navigation (themeToggle)="toggleTheme($event)" [class.dark-theme]="theme === 'dark'"></app-navigation>
+<app-navigation (themeToggle)="toggleTheme($event)" [ngClass]="{'dark-theme': theme === 'dark', 'light-theme': theme === 'light'}"></app-navigation>
