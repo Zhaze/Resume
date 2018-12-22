@@ -19,7 +19,7 @@
               <span class="location">
                 {{ job.location }}
               </span>
-              <span *ngIf="isSmallScreen">
+              <span class="dates-worked" *ngIf="isSmallScreen">
                 {{ job.startDate | date:'MMMM y' }}-{{ job.endDate | date:'MMMM y' }}
               </span>
             </div>
@@ -28,7 +28,7 @@
               <div fxFlex class="comments">
                 {{ job.comments }}
               </div>
-              <div fxFlex>
+              <div fxFlex class="details">
                 <ul>
                   <li *ngFor="let detail of job.description">
                     {{ detail }}
